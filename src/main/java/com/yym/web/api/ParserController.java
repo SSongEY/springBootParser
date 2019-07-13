@@ -24,7 +24,7 @@ public class ParserController {
   @GetMapping
   public Parser convert(@Valid @ModelAttribute Parser parser, BindingResult bindingResult){
     if(bindingResult.hasErrors()){
-      throw new ApiException(ErrorCode.UNKNOWN_ERROR);
+      throw new ApiException(ErrorCode.INVALID_INPUT);
     }
     return parserService.convert(parser);
   }
