@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel='stylesheet' href='/webjars/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src='/webjars/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+    <script type="text/javascript" th:src="@{/script/parse.js}"></script>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Text Analyzer</title>
+</head>
+<body>
+    <div class="container mt-5 col-lg-4">
+        <h2>Parse</h2>
+        <form id="parseForm">
+            <div class="form-group">
+                <p>
+                    <label for="url" class="sr-only">Request Url</label>
+                    <input type="text" id="url" class="form-control" placeholder="url" required="true"/>
+                </p>
+                <p>
+                    <select name="selValue" class="selectpicker">
+                        <option value="T">Text Only</option>
+                        <option value="A">ALL</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="unit" class="sr-only">Request Url</label>
+                    <input type="text" id="unit" class="form-control" placeholder="묶음 단위"/>
+                </p>
+                <p>
+                    <label>
+                        <button class="btn btn-primary" type="submit">출력</button>
+                    </label>
+                </p>
+            </div>
+            <div class="form-group">
+                <label for="quotient">quotient textarea</label>
+                <textarea class="form-control rounded-0" id="quotient"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="remainder">quotient textarea</label>
+                <textarea class="form-control rounded-0" id="remainder"></textarea>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
+
+
